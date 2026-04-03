@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --primary: #5d4fff;
+    --accent: #f97316;
+    --primary-rgb: 93, 79, 255;
+    --accent-rgb: 249, 115, 22;
+    --background: #0a0a14;
+    --foreground: #f9fafb;
+    --border: rgba(255,255,255,0.1);
+    --ring: rgba(93,79,255,0.4);
+  }
+
+  * {
+    border-color: rgba(255,255,255,0.1);
+  }
+
+  body {
+    background-color: #0a0a14;
+    color: #f9fafb;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-strong {
+  background: rgba(93, 79, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(93, 79, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(93, 79, 255, 0.15);
+}
