@@ -1,5 +1,9 @@
 "use client";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+import dynamic from "next/dynamic";
+const BackgroundBeamsWithCollision = dynamic(
+  () => import("@/components/ui/background-beams-with-collision").then((m) => m.BackgroundBeamsWithCollision),
+  { ssr: false, loading: () => <div className="absolute inset-0 z-0" style={{ background: "linear-gradient(135deg, #0a0a14 0%, #1a1040 100%)" }} /> }
+);
 
 const services = [
   { emoji: "🚨", name: "Emergency Plumbing", description: "24/7 rapid response to burst pipes, flooding, and urgent callouts across London" },
